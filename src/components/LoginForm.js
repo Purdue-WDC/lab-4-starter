@@ -4,9 +4,10 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const LoginForm = (props) => {
-	/* TODO: Set up state for the form data */
+	/* TODO: Set up state for the form data using useState */
 
-	/* TODO: Set up a function / functions to change the state for the form data */
+	/* TODO: Set up a function (or multiple functions) to 
+		change the state for the form data */
 
     const handleSubmit = (e) => {
         e.preventDefault();

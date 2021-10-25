@@ -28,12 +28,20 @@ const REMOVE_ITEM = 'REMOVE_ITEM';
     // @desc    adds the given item to the list in the state
     // @access  Private
 
+    /*
+        Simply call the dispatch() method with the type as ADD_ITEM
+        and the payload as the item passed in the argument
+    */
 
     // TODO
     // @func    removeItem()
     // @params  id - the id of the todo list item to remove
     // @desc    removes the specified item from the list in the state
 
+    /*
+        Simply call the dispatch() method with the type as REMOVE_ITEM
+        and the payload as the id passed in the argument
+    */
 
     // TODO
     // @func    getItems()
@@ -41,6 +49,19 @@ const REMOVE_ITEM = 'REMOVE_ITEM';
     // @desc    gets the logged in user's todo items
     // @return  [] containing the items belonging to the logged in user
     // @access  Private
+
+    /*
+        There are 2 ways you can do this:
+            (i)     Option 1 (more code)
+                - initialize an empty list
+                - iterate through the items[] list
+                - if the user id matches the one passed in the argument, add it 
+                    to the empty list
+                - return the list
+            (ii)    Option 2 (literally one line of code)
+                - Look up the filter() function: 
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+    */
 
 
     // TODO
