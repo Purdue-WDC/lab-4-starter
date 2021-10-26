@@ -20,6 +20,44 @@ const REGISTER = 'REGISTER';
 
 /* TODO: set up a reducer function to deal with the different auth actions */
 
+/*
+    Since the slides don't cover updating a state object which has multiple
+    properties, here's an important piece of info:
+    When you update a particular property, you should also assign other 
+    properties to their previous values.
+    So for example, the LOGOUT case would look like this:
+
+    case LOGOUT:
+        return {
+            users: state.users,
+            user: null,
+            authenticated: false
+        }
+
+    Why? Because you are assigning this object to the state. So, if you do something 
+    like this:
+
+    return {
+        user: null,
+        authenticated: false
+    }
+
+    You will lose the users list from the state.
+
+    Another way to do this is by using something called a spread operator
+    (Yeah I know we didn't cover it in class, but hey learning something new is always a good thing)
+
+    The return for LOGOUT would then look something like this:
+
+    return {
+        ...state,
+        user: null,
+        authenticated: false
+    }
+
+    Look up the spread operator if you're interested.
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+*/
 
 /* TODO: Export a provider which will maintain state and 
     handle dispatching requests */
